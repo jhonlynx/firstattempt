@@ -1,0 +1,14 @@
+body {
+    font-family: 'Roboto', sans-serif; /* Changed to Roboto */
+    line-height: 1.6;
+    background: linear-gradient(to bottom, #1E293B, #111827); /* Dark blue to deep gray */
+    color: #E5E7EB; /* Light gray text */
+}
+h2, h3 {
+    font-family: 'Great Vibes', cursive; /* Elegant cursive for headings */
+}
+h1 {
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    color: #F59E0B; /* Optional: add color for emphasis */
+}

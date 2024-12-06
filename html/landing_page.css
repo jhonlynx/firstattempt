@@ -1,0 +1,182 @@
+/* style sa body */
+body {
+    height: 100vh; /* Full view ang height sa screen */
+    background: url('spot.png') no-repeat center center/cover; /* Background image naka center alignment ug cover ang iyaha scaling */
+    font-family: Arial, sans-serif; /* Font style sa tibuok page para unifrom*/
+    margin: 0; /* Remove ang default margin */
+    padding: 0; /* Remove ang default padding */
+}
+
+/* Header styling */
+header {
+    position: fixed; /* para naka dikit rajud adtus taas ang navigation */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width sa screen */
+    background: linear-gradient(to right, rgba(30, 64, 175, 0.7), rgba(30, 41, 59, 0.7)); /* Gradient background */
+    color: black; /* Text color */
+    padding: 10px 20px; /* Padding sulod the header */
+    z-index: 1000; /* para stay ang header babaw ug functional sad ang mga button sa navi */
+    display: flex; /* para ma allign horizontally */
+    justify-content: center; /* ma center ang content horizontally */
+    align-items: center; /* ma center ang content vertically */
+    flex-wrap: wrap; /* para ma visible, babaw siyas background */
+}
+
+/* elements inside sa header */
+header .logo,
+header .main-nav,
+header .menu-btn {
+    margin-right: 250px; /* Adds spacing between elements */
+}
+
+header .menu-btn {
+    margin-right: 0; /* Reset margin for the menu button */
+}
+
+/* Logo styling */
+.logo img {
+    width: 200px; /* Logo width */
+    height: 80px; /* Logo height */
+}
+
+/* Main navigation menu styling */
+.main-nav ul {
+    list-style: none; /* Remove ang bullets sa list */
+    margin: 0; /* Remove ang default margin */
+    padding: 0; /* Remove ang default padding */
+    display: flex; /* para display ang items horizontally */
+    gap: 250px; /* Space between navigation items */
+}
+
+.main-nav li {
+    display: inline-block; /* para ma inline ang mga items */
+}
+
+.main-nav a {
+    text-decoration: none; /* Remove ang underline sa links gi tudlo ni sir sa ako pag present sa ako html file*/
+    color: #ff7f50; /* color for links */
+    font-size: 1em; /* Font size for links */
+    font-weight: 500; /* Font weight */
+    padding: 5px 10px; /* Add padding to links */
+}
+
+.main-nav a:hover {
+    color: black; /* once mo points ang kursor kay mo lain ang color */
+}
+
+/* Styling for the menu button */
+.menu-btn {
+    background: none; /* No background for the button */
+    border: none; /* Remove ang border */
+    color: #ff7f50; /* color for the button */
+    font-size: 1.2em; /* Font size for the button */
+    cursor: pointer; /* para once matapat ang kusor mahimong pointing hand */
+    padding: 0 10px; /* Horizontal padding */
+    display: inline-block; /* para inline ang button */
+    text-align: center; /* Center ang text */
+    white-space: nowrap; /* ma prevent ang text wrapping */
+}
+
+.menu-btn:hover {
+    color: black; /* once mo points ang kursor kay mo lain ang color */
+}
+
+/* Side menu styling */
+.side-menu {
+    position: fixed; /* Fixed to the side sa screen */
+    top: 0;
+    right: -350px; /* para ma hide siya sa screen */
+    width: 300px; /* Menu width */
+    height: 100%; /* Full height */
+    background: linear-gradient(to right, #1E29B3, #111827); /* Gradient background */
+    color: white; /* Text color */
+    overflow: hidden; /* para ma hide ang content */
+    transition: right 0.3s ease; /* para smooth ang transition ig open sa menu ug close */
+}
+
+/* Hide ang check box */
+.menu-checkbox {
+    display: none; 
+}
+
+/* para makita ang side menu once i click ang menu bar */
+.menu-checkbox:checked ~ .side-menu {
+    right: 0; /* para adtus sa right side mo gawas ang side menu */
+}
+
+/* Close button inside the side menu */
+.close-btn {
+    position: absolute; 
+    top: 10px; /* Distance gikan sa top */
+    left: 10px; /* Distance gikan sa left */
+    background: none; /* No background */
+    border: none; /* Remove border */
+    color: white; /* Text color */
+    font-size: 1.5em; /* Font size */
+    cursor: pointer; /* para once matapat ang kusor mahimong pointing hand */
+}
+
+.close-btn:hover {
+    color: #ff7f50; /* mo lahi ang color once ma point ang kursor */
+}
+
+/* Side menu content styling */
+.side-menu ul {
+    list-style: none; /* Remove ang bullet sa list */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    text-align: center; /* Center ang items */
+}
+
+.side-menu li {
+    padding: 88px; /* Space around each item */
+}
+
+.side-menu a {
+    color: white; /* Text color */
+    text-decoration: none; /* Remove ang underline */
+    font-size: 1em; /* Font size */
+}
+
+.side-menu a:hover {
+    background-color: #555; /* mo lahi ang color once ma point ang kursor */
+}
+
+/* Overlay styling for the landing page */
+.overlay {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    display: flex; 
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* para ma center ang content vertically */
+    align-items: center; /* para ma center ang content horizontally */
+    text-align: center; /* Center ang text */
+    color: white; /* Text color */
+}
+
+/* Logo styling inside the overlay */
+.overlay img {
+    width: 500px; /* Logo width */
+    height: 250px; /* Logo height */
+}
+
+/* Main heading inside the overlay */
+.overlay h1 {
+    font-size: 2em; /* Font size */
+    line-height: 1.5; /* Line spacing */
+    margin-bottom: 20px; /* Space below heading */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow effect sa text */
+}
+
+/* Subheading inside the overlay */
+.overlay h2 {
+    font-size: 2em; /* Font size */
+    line-height: 1.5; /* Line spacing */
+    margin-bottom: 20px; /* Space below sa heading */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow effect sa text */
+    color: #ff7f50; /* color text */
+}
